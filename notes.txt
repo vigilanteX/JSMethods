@@ -1,0 +1,327 @@
+Got it 👍
+Below is a **clean, complete, and practical list of the most important methods** for **JavaScript primitive types** and **objects**—the stuff you *actually* use in real code and interviews.
+
+I’ll keep it **clear, grouped, and example-oriented**, since you prefer detailed explanations.
+
+---
+
+# JavaScript Important Methods
+
+*(Primitives & Objects)*
+
+---
+
+## 1️⃣ String Methods (Primitive: `string`)
+
+> Strings are **immutable** → methods return **new strings**
+
+### 🔹 Inspection / Search
+
+```js
+str.length
+str.includes("a")
+str.startsWith("He")
+str.endsWith("!")
+str.indexOf("a")
+str.lastIndexOf("a")
+```
+
+### 🔹 Extraction
+
+```js
+str.slice(start, end)
+str.substring(start, end)
+str.substr(start, length)   // deprecated but still seen
+```
+
+### 🔹 Transformation
+
+```js
+str.toUpperCase()
+str.toLowerCase()
+str.trim()
+str.trimStart()
+str.trimEnd()
+```
+
+### 🔹 Replace / Split
+
+```js
+str.replace("a", "b")
+str.replaceAll("a", "b")
+str.split(",")
+```
+
+### 🔹 Utility
+
+```js
+str.concat(" world")
+str.repeat(3)
+str.charAt(0)
+str.charCodeAt(0)
+```
+
+---
+
+## 2️⃣ Number Methods (Primitive: `number`)
+
+### 🔹 Formatting
+
+```js
+num.toFixed(2)
+num.toPrecision(4)
+num.toString()
+```
+
+### 🔹 Checking (Static)
+
+```js
+Number.isInteger(10)
+Number.isNaN(NaN)
+Number.isFinite(100)
+```
+
+### 🔹 Conversion
+
+```js
+Number("123")
+parseInt("10px")
+parseFloat("10.5px")
+```
+
+---
+
+## 3️⃣ Boolean Methods (Primitive: `boolean`)
+
+> Very few methods (rarely used)
+
+```js
+bool.toString()
+```
+
+Truthy / falsy checks are more important:
+
+```js
+Boolean(value)
+!!value
+```
+
+---
+
+## 4️⃣ Symbol (Primitive: `symbol`)
+
+```js
+Symbol("id")
+Symbol.for("key")
+Symbol.keyFor(sym)
+```
+
+Used mainly for:
+
+* hidden object properties
+* avoiding key collisions
+
+---
+
+## 5️⃣ BigInt (Primitive: `bigint`)
+
+```js
+BigInt(123)
+123n
+```
+
+⚠ Cannot mix with `number`
+
+---
+
+## 6️⃣ Array Methods (Object type)
+
+### 🔹 Iteration (MOST IMPORTANT)
+
+```js
+arr.forEach(fn)
+arr.map(fn)
+arr.filter(fn)
+arr.reduce(fn, initial)
+arr.some(fn)
+arr.every(fn)
+```
+
+### 🔹 Searching
+
+```js
+arr.includes(value)
+arr.indexOf(value)
+arr.find(fn)
+arr.findIndex(fn)
+```
+
+### 🔹 Add / Remove
+
+```js
+arr.push()
+arr.pop()
+arr.shift()
+arr.unshift()
+arr.splice()
+```
+
+### 🔹 Non-Mutating (Preferred)
+
+```js
+arr.slice()
+arr.concat()
+arr.flat()
+arr.flatMap()
+```
+
+### 🔹 Sorting / Reversing
+
+```js
+arr.sort()
+arr.reverse()
+```
+
+---
+
+## 7️⃣ Object Methods (`Object`)
+
+### 🔹 Keys / Values
+
+```js
+Object.keys(obj)
+Object.values(obj)
+Object.entries(obj)
+```
+
+### 🔹 Copy / Merge
+
+```js
+Object.assign(target, source)
+{ ...obj }          // spread
+```
+
+### 🔹 Property Checks
+
+```js
+obj.hasOwnProperty("key")
+Object.hasOwn(obj, "key")
+```
+
+### 🔹 Freeze / Seal
+
+```js
+Object.freeze(obj)
+Object.seal(obj)
+Object.isFrozen(obj)
+Object.isSealed(obj)
+```
+
+---
+
+## 8️⃣ JSON Methods (Very Important)
+
+```js
+JSON.stringify(obj)
+JSON.parse(jsonString)
+```
+
+Used in:
+
+* API calls
+* localStorage
+* file storage
+
+---
+
+## 9️⃣ Date Methods
+
+```js
+new Date()
+date.getFullYear()
+date.getMonth()
+date.getDate()
+date.getTime()
+```
+
+Formatting:
+
+```js
+date.toISOString()
+date.toLocaleDateString()
+date.toLocaleString()
+```
+
+---
+
+## 🔟 Math Methods (Static Utility)
+
+```js
+Math.round()
+Math.floor()
+Math.ceil()
+Math.trunc()
+Math.max()
+Math.min()
+Math.random()
+Math.sqrt()
+Math.pow()
+```
+
+---
+
+## 1️⃣1️⃣ Type & Value Checks (VERY IMPORTANT)
+
+```js
+typeof value
+Array.isArray(arr)
+value instanceof Class
+```
+
+---
+
+## ⚠️ Key Concept You MUST Remember
+
+### ❓ Why primitives have methods?
+
+```js
+"hello".toUpperCase()
+```
+
+JS **temporarily wraps primitives** in objects:
+
+```js
+new String("hello")
+```
+
+This is called **autoboxing**.
+
+---
+
+## ✅ Most Important for Real Projects (Priority List)
+
+🔥 **Top Tier**
+
+* `map`, `filter`, `reduce`
+* `Object.keys / values / entries`
+* `JSON.parse / stringify`
+* `includes`, `find`
+* `typeof`, `Array.isArray`
+
+⚡ **Second Tier**
+
+* `slice`, `splice`
+* `toFixed`
+* `sort`
+* `Math.random`
+
+---
+
+## 🧠 If you want next:
+
+* 📄 **PDF with tables**
+* 📊 **Interview-only list**
+* 🧪 **Practice problems**
+* 🧠 **How these behave internally (JS engine)**
+
+Just tell me how deep you want to go 🚀
