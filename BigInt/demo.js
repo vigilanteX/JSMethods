@@ -20,5 +20,7 @@
 // - Number  → 10, 3.14
 // - BigInt  → 10n, BigInt(10)
 
-const x = 1234;
+let x = 1234;
+console.log(typeof x);
+x = BigInt(x);
 console.log(typeof x);
