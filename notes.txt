@@ -108,21 +108,6 @@ Boolean(value)
 
 ---
 
-## 4️⃣ Symbol (Primitive: `symbol`)
-
-```js
-Symbol("id")
-Symbol.for("key")
-Symbol.keyFor(sym)
-```
-
-Used mainly for:
-
-* hidden object properties
-* avoiding key collisions
-
----
-
 ## 5️⃣ BigInt (Primitive: `bigint`)
 
 ```js
@@ -298,30 +283,3 @@ This is called **autoboxing**.
 
 ---
 
-## ✅ Most Important for Real Projects (Priority List)
-
-🔥 **Top Tier**
-
-* `map`, `filter`, `reduce`
-* `Object.keys / values / entries`
-* `JSON.parse / stringify`
-* `includes`, `find`
-* `typeof`, `Array.isArray`
-
-⚡ **Second Tier**
-
-* `slice`, `splice`
-* `toFixed`
-* `sort`
-* `Math.random`
-
----
-
-## 🧠 If you want next:
-
-* 📄 **PDF with tables**
-* 📊 **Interview-only list**
-* 🧪 **Practice problems**
-* 🧠 **How these behave internally (JS engine)**
-
-Just tell me how deep you want to go 🚀
