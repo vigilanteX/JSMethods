@@ -24,3 +24,7 @@ let x = 1234;
 console.log(typeof x);
 x = BigInt(x);
 console.log(typeof x);
+
+//TypeError: Cannot mix BigInt and other types, use explicit conversions
+// let y = 123n + 4;
+// console.log(y);
